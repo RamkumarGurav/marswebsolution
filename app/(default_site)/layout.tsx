@@ -2,6 +2,9 @@ import FooterBottom from "@/components/FooterBottom";
 import FooterTop from "@/components/FooterTop";
 import HeaderTop from "@/components/HeaderTop";
 import Navbar from "@/components/Navbar/Navbar";
+import Image from "next/image";
+import WhatsappLogo from "@/public/whatsapplogo_1.png";
+import Link from "next/link";
 
 export const metadata = {
   title: "Next.js",
@@ -15,16 +18,33 @@ export default function WebsiteLayout({
 }) {
   return (
     <div>
-      <header id="header">
-        <HeaderTop />
-        <Navbar />
-      </header>
+      <HeaderTop />
+      <Navbar />
       <main>{children}</main>
       <footer id="footer">
         <div className="bg-[#31384D] p-4"></div>
         <FooterTop />
         <FooterBottom />
       </footer>
+      <aside className="bg-[#0293C2] text-white px-6 py-2  fixed right-[20px] top-[30vh] flex items-center justify-center ">
+        <button className="rotate-90"><span>Equire Here </span>e</button>
+      </aside>
+      <div className="bg-[#34AB49] text-white px-6 py-2  fixed left-0 bottom-0 flex items-center justify-center">
+        <Link
+          href="https://api.whatsapp.com/send?phone=+918088230479&amp;text=MARS%20Web%20Solutions%20"
+          target="_blank"
+          title="Contact Us via WhatsApp"
+        >
+          <Image
+            src={WhatsappLogo}
+            alt="whatsapp logo"
+            width={200}
+            height={200}
+            className="w-auto h-[19px] object-cover"
+          />
+        </Link>
+        <span className="grid place-content-center">Whatsapp</span>
+      </div>
     </div>
   );
 }

@@ -15,7 +15,7 @@ export default function WebsiteLayout({
 }) {
   return (
     <div>
-      <header id="header" >
+      <header id="header">
         <HeaderTop />
         <Navbar />
       </header>

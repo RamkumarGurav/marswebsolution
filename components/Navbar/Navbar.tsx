@@ -14,8 +14,8 @@ export default function Navbar() {
             className="w-auto h-10 sm:h-16 object-cover"
           />
         </div>
-        <div className="visible md:hidden">ham</div>
-        <div className="hidden md:flex items-center justify-evenly gap-4">
+        <div className="visible lg:hidden">ham</div>
+        <div className="hidden lg:flex items-center justify-evenly gap-4">
           <div>Home </div>
           <div>About </div>
           <div>contact </div>

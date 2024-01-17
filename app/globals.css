@@ -9,35 +9,72 @@
   box-sizing: border-box;
 }
 
-/* //-- PAGINATION COMPONENT */
-
-.pagination-shell {
-  @apply flex justify-center;
-}
-.pagination-container {
-  /* @apply border border-solid border-gray-400 rounded-lg overflow-hidden */
-  @apply flex flex-wrap  gap-1  rounded-md;
+.footer-social-link {
+  @apply rounded-full  border-[1px] border-gray-500 p-2;
 }
 
-.pageBtn {
-  /* @apply bg-white text-gray-900 w-[30px] px-1 py-1 border-l border-gray-500 text-sm mx-1; */
-  @apply bg-white border border-gray-400 shadow-md rounded  text-gray-900 
-  min-w-[25px] px-1 text-sm  hover:bg-blue-500 hover:border-blue-500 hover:text-white transition duration-300 ease-in;
+.footer-social-icon {
+  @apply text-gray-500 hover:text-gray-600;
 }
 
-.activePageBtn {
-  @apply bg-blue-700 text-white border-blue-700;
+.footPhoneNo {
+  z-index: 999;
 }
 
-.prev-next-btn {
-  /* @apply text-gray-900 p-3 border-l border-gray-500; */
-  @apply flex items-center  justify-center bg-white text-gray-900   px-1  text-lg border border-solid border-gray-400  active:bg-blue-700 active:border-blue-700 active:text-white transition duration-300 ease-in;
+/* .footPhoneNo::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: -20px;
+  bottom: -10px;
+  border-bottom: 30px solid blue;
+  border-left: 30px solid transparent;
+
+  z-index: 1;
+} */
+/* .footPhoneNo::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  right: -20px;
+  bottom: -10px;
+  border-bottom: 20px solid #f39406;
+  border-right: 20px solid transparent;
+  z-index: 1;
+} */
+/* .footPhoneNo1::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: -20px;
+  bottom: 0px;
+  border-top: 30px solid #f39406;
+  border-left: 30px solid transparent;
+  z-index: -1;
+} */
+
+.quickLinkUl {
+  list-style-type: square;
+  list-style-image: linear-gradient(
+    to left bottom,
+    rgb(96, 96, 255),
+    rgb(0, 0, 0)
+  );
 }
 
-.first-page-btn {
-  @apply px-1 border border-gray-400 shadow-md rounded-s-lg bg-white active:bg-blue-700 active:border-blue-700 active:text-white transition duration-300 ease-in;
-}
+#services {
+  background-image: url("https://images.unsplash.com/photo-1471039497385-b6d6ba609f9c?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YnVpbGRpbmd8ZW58MHx8MHx8fDA%3D");
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-.last-page-btn {
-  @apply px-1 border border-gray-400 shadow-md rounded-e-lg bg-white active:bg-blue-700 active:border-blue-800 active:text-white transition duration-300 ease-in;
+  box-shadow: inset 0 0 0 1000px rgba(15, 7, 121, 0.582);
 }

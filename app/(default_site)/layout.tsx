@@ -22,28 +22,57 @@ export default function WebsiteLayout({
       <Navbar />
       <main>{children}</main>
       <footer id="footer">
-        <div className="bg-[#31384D] p-4"></div>
+        <div className="bg-[#31384D] h-[16px]"></div>
         <FooterTop />
         <FooterBottom />
       </footer>
-      <aside className="bg-[#0293C2] text-white px-6 py-2  fixed right-[20px] top-[30vh] flex items-center justify-center ">
-        <button className="rotate-90"><span>Equire Here </span>e</button>
-      </aside>
-      <div className="bg-[#34AB49] text-white px-6 py-2  fixed left-0 bottom-0 flex items-center justify-center">
+
+      <div className="visible grid grid-cols-2 fixed bottom-0 left-0 right-0 w-full sm:hidden ">
+        <div className="flex justify-center items-center gap-1 bg-[#34AB49] text-white p-4">
+          <Link
+            href="https://api.whatsapp.com/send?phone=+918088230479&amp;text=MARS%20Web%20Solutions%20"
+            target="_blank"
+            title="Contact Us via WhatsApp"
+            className="flex justify-center items-center gap-1"
+          >
+            <Image
+              src={WhatsappLogo}
+              alt="whatsapp logo"
+              width={200}
+              height={200}
+              className="w-auto h-[20px]  object-cover"
+            />
+            <span className="grid place-content-center">Whatsapp</span>
+          </Link>
+        </div>
+        <div className="bg-[#0293C2] grid place-items-center">
+          <span className="text-md font-semibold cursor-pointer text-white">
+            Enquire Here
+          </span>
+        </div>
+      </div>
+
+      <div className="bg-[#0293C2] hidden sm:flex justify-center items-center fixed right-0 top-[30vh]  w-[45px] h-[130px]  ">
+        <button className="rotate-90 text-lg text-white font-semibold whitespace-nowrap absolute top-[50px] right-[-22px] ">
+          Equire Here
+        </button>
+      </div>
+      <div className="bg-[#34AB49] text-white px-6 py-2 hidden fixed left-0 bottom-0 sm:flex items-center justify-center ">
         <Link
           href="https://api.whatsapp.com/send?phone=+918088230479&amp;text=MARS%20Web%20Solutions%20"
           target="_blank"
           title="Contact Us via WhatsApp"
+          className="flex justify-center items-center gap-1"
         >
           <Image
             src={WhatsappLogo}
             alt="whatsapp logo"
             width={200}
             height={200}
-            className="w-auto h-[19px] object-cover"
+            className="w-auto h-[20px]  object-cover"
           />
+          <span className="grid place-content-center">Whatsapp</span>
         </Link>
-        <span className="grid place-content-center">Whatsapp</span>
       </div>
     </div>
   );

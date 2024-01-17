@@ -6,7 +6,9 @@ import Work from "@/components/Work";
 
 export default function Home() {
   return (
-    <div className=" min-h-[500px] w-[100%] bg-gray-500">
+    <div className=" min-h-[500px] w-[100%] ">
+      <AboutCompany />
+      <Services />
       {/* <HomeCarousel />
       <AboutCompany />
       <Services />

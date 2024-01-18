@@ -11,7 +11,7 @@ export default function ServiceCard({
       <Link href={service.link}>{service.icon}</Link>
 
       <h2 className="text-center text-2xl font-semibold">{service.title}</h2>
-      <p className="text-center">{service.desc}</p>
+      <p className="text-center px-2">{service.desc}</p>
       <Link href={`${service.link}`} className="underline border-b-slate-100">
         Learn More
       </Link>

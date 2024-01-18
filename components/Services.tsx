@@ -48,13 +48,13 @@ export default function Services() {
   return (
     <div
       id="services"
-      className=" min-w-[100%] py-10 bg-blue-800/50 text-white"
+      className=" min-w-[100%] py-20 bg-blue-800/50 text-white"
     >
       <div className="container mx-auto flex flex-col justify-center items-center gap-4">
         <h2 className="text-4xl text-gray-100 font-semibold text-center">
           Featured Services
         </h2>
-        <p className="text-center text-base font-medium text-gray-100 max-w-[700px] mb-4">
+        <p className="text-center text-base font-medium text-gray-100 max-w-[700px] mb-4 leading-loose">
           We provide solutions for business by creative design, scalable
           development and interactive digital engagement. Our design team helps
           you in translating your services and products into powerful business.

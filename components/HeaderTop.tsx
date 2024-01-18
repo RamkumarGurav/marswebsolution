@@ -49,7 +49,7 @@ export default function HeaderTop() {
             </button>
           </div>
         </form>
-        <div className="bg-[#164058] flex justify-between md:justify-end  lg:justify-end gap-4   text-[13px] ">
+        <div className="bg-[#164058] flex justify-between md:justify-end  lg:justify-evenly gap-4   text-[13px] ">
           <div className="flex justify-center items-center ">
             <Link
               href="https://api.whatsapp.com/send?phone=+918088230479&amp;text=MARS%20Web%20Solutions%20"

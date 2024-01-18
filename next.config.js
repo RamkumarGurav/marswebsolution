@@ -10,6 +10,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "icon-library.com/**",
       },
+      {
+        protocol: "https",
+        hostname: "www.marswebsolution.com/**",
+      },
     ],
   },
 };

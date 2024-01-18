@@ -223,7 +223,7 @@ export default function FooterTop() {
           </div>
           <div className="footTopRightAddress lg:col-span-2 flex flex-col justify-center items-center  z-0">
             <div className="flex justify-center items-center h-[150px]">
-              <div className="footPhoneNo bg-[#FF9900] shadow-lg relative  px-[40px] py-[15px] flex justify-center items-center gap-2 z-[999] ">
+              <div className="footPhoneNo bg-[#FF9900] shadow-lg relative  px-[30px] py-[15px] flex justify-center items-center gap-2 z-[999] ">
                 <FaPhone size={22} className="footPhoneIcon text-gray-100" />
 
                 <Link

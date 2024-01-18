@@ -1,6 +1,6 @@
 export default function AboutCompany() {
   return (
-    <div className=" min-w-[100%] py-10">
+    <div className=" min-w-[100%] py-[80px]">
       <div className="container mx-auto flex flex-col justify-center items-center gap-4">
         <h2 className="text-2xl sm:text-4xl text-gray-700 font-semibold text-center ">
           Web Design Company in Bangalore

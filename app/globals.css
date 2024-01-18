@@ -61,11 +61,7 @@
 
 .quickLinkUl {
   list-style-type: square;
-  list-style-image: linear-gradient(
-    to left bottom,
-    rgb(96, 96, 255),
-    rgb(0, 0, 0)
-  );
+  list-style-image: url("https://www.marswebsolution.com/images/list-icon.png");
 }
 
 #services {

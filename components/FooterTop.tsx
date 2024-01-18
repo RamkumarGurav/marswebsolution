@@ -14,7 +14,7 @@ export default function FooterTop() {
             Services
           </h4>
           <div className="grid lg:grid-cols-2">
-            <ul className="quickLinkUl  px-4 pt-4 flex flex-col items-center lg:items-start">
+            <ul className="quickLinkUl  px-4 pt-4 flex flex-col items-center lg:items-start list-inside lg:list-outside">
               <li className="mb-2 ">
                 <Link
                   href="privacy-policy.html"

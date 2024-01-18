@@ -66,7 +66,7 @@ export default function Portfolio() {
       <div className="w-full mt-10 grid place-content-center">
         <Link
           href="https://www.marswebsolution.com/portfolio.html"
-          className="mx-auto bg-[#5695AB] text-gray-100  font-semibold py-2 px-4 border border-[#5695AB] rounded hover:bg-white hover:text-[#5695AB] uppercase"
+          className="mx-auto text-sm md:text-base text-center bg-[#5695AB] text-gray-100  font-semibold py-2 px-4 border border-[#5695AB] rounded hover:bg-white hover:text-[#5695AB] uppercase"
         >
           All works in our portfolio
         </Link>

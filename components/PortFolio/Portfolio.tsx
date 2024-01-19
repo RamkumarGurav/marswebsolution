@@ -1,27 +1,27 @@
-import Image from "next/image";
 import PortfolioCard from "./PortfolioCard";
 import Link from "next/link";
+import { getImagesWithSrcAndBlurDataUrlArr } from "@/utils/base64Converters";
 
-Image;
-export default function Portfolio() {
+export default async function Portfolio() {
   let sitesArr = [
     {
       link: "https://lavinagranites.com/",
-      image: "https://www.marswebsolution.com/images/portfolio/design9.jpg",
+      imageUrl: "https://www.marswebsolution.com/images/portfolio/design9.jpg",
       name: "Construciton Industry",
       title: "Granite Website development in Bengaluru",
       alt: "portfolio ",
     },
     {
       link: "https://karnatakafurnishing.com/",
-      image: "https://www.marswebsolution.com/images/portfolio/seo2.jpg",
+      imageUrl: "https://www.marswebsolution.com/images/portfolio/seo2.jpg",
       name: "Furnishing Industry",
       title: "Furnishing Website development in Bengaluru",
       alt: "Furnishing Website ",
     },
     {
       link: "https://www.taazashahimewa.com/",
-      image: "https://www.marswebsolution.com/images/portfolio/e-commerce4.jpg",
+      imageUrl:
+        "https://www.marswebsolution.com/images/portfolio/e-commerce4.jpg",
       name: "Dry Fruit Products",
       title: "E-commerce Website development in Bengaluru",
       alt: "E-commerce Website ",
@@ -29,26 +29,32 @@ export default function Portfolio() {
 
     {
       link: "https://www.fabmodula.com/",
-      image: "https://www.marswebsolution.com/images/portfolio/seo1.jpg",
+      imageUrl: "https://www.marswebsolution.com/images/portfolio/seo1.jpg",
       name: "Interior Designing",
       title: "Interior Website development in Bengaluru",
       alt: "Interior Website ",
     },
     {
       link: "https://www.sizzleproperties.com/",
-      image: "https://www.marswebsolution.com/images/portfolio/design1.jpg",
+      imageUrl: "https://www.marswebsolution.com/images/portfolio/design1.jpg",
       name: "Construction",
       title: "Construction Website development in Bengaluru",
       alt: "Construction Website ",
     },
     {
       link: "https://www.bionovastore.com/",
-      image: "https://www.marswebsolution.com/images/portfolio/design56.jpg",
+      imageUrl: "https://www.marswebsolution.com/images/portfolio/design56.jpg",
       name: "Ecommerce",
       title: "Ecommerce Website development in Bengaluru",
       alt: "Ecommerce Website",
     },
   ];
+
+  let sitesArrWithBlurDataUrl = await getImagesWithSrcAndBlurDataUrlArr(
+    sitesArr
+  );
+
+  // console.log("sitesArrWithBlurDataUrl", sitesArrWithBlurDataUrl);
 
   return (
     <div id="portfolio" className="portfolioShell py-20 px-12 ">
@@ -56,9 +62,9 @@ export default function Portfolio() {
         Port Folio
       </h1>
       <div className="mx-auto lg:max-w-[1000px] grid md:grid-cols-2 lg:grid-cols-3 gap-x-4  gap-y-8 place-content-center place-items-center">
-        {sitesArr.map((siteDetails, i) => (
+        {sitesArrWithBlurDataUrl?.map((item, i) => (
           <div key={i}>
-            <PortfolioCard siteDetails={siteDetails} />
+            <PortfolioCard siteDetails={item} />
           </div>
         ))}
       </div>

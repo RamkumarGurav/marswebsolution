@@ -9,6 +9,36 @@
   box-sizing: border-box;
 }
 
+/* //---Navbar */
+.navLink {
+  @apply text-base text-inherit hover:text-white w-full h-full px-4  whitespace-nowrap  font-[400] uppercase;
+}
+
+.navLinkInDrop {
+  @apply px-4 py-2 pb-4 hover:underline border-b  border-solid  block whitespace-nowrap;
+}
+.navLinkMobile {
+  @apply text-base text-end pr-2 text-white  font-[400] uppercase;
+}
+
+.mobileDropDownLink {
+  @apply px-4 py-2 pb-[5px]  border-b border-solid border-b-gray-400 block whitespace-nowrap text-left text-gray-200 hover:underline mb-2;
+}
+
+.dropDownLinks {
+  visibility: hidden;
+}
+
+.dropDownContainer:hover .dropDownLinks {
+  visibility: visible;
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.537) 0px 5px 12px;
+
+  z-index: 1;
+}
+
+/* //---Footer */
+
 .footer-social-link {
   @apply rounded-full  border-[1px] border-gray-500 p-2;
 }
@@ -59,11 +89,31 @@
   z-index: -1;
 } */
 
+/* //------ FOOTER */
+
 .quickLinkUl {
   list-style-type: square;
-  list-style-image: url("https://www.marswebsolution.com/images/list-icon.png");
+  list-style-image: url(".././public/list-icon.png");
 }
 
+.quickLinkUl li {
+  width: 100%;
+  text-align: center;
+  list-style-position: inside;
+}
+
+.footerQuickLink {
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  .quickLinkUl li {
+    text-align: start;
+    list-style-position: outside;
+  }
+}
+
+/* /// ---- SERVICES */
 #services {
   background: linear-gradient(
       to bottom,
@@ -129,9 +179,11 @@
 }
 
 .slide1 {
-  background: linear-gradient(90deg, #721074b9 0%, #10585eb9 100%),
+  /* background: linear-gradient(90deg, #721074b9 0%, #10585eb9 100%),
     url("https://images.unsplash.com/photo-1471039497385-b6d6ba609f9c?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YnVpbGRpbmd8ZW58MHx8MHx8fDA%3D")
-      no-repeat center;
+      no-repeat center; */
+  background: linear-gradient(90deg, #721074b9 0%, #10585eb9 100%),
+    url(".././public/keyboard1.avif") no-repeat center;
   background-size: cover;
 }
 .slide2 {

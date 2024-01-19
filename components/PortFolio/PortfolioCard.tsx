@@ -2,15 +2,17 @@ import Image from "next/image";
 import Link from "next/link";
 
 export type SiteDetailType = {
-  link: string;
-  image: string;
-  name: string;
-  title: string;
-  alt: string;
+  [key: string]: any;
+  // link: string;
+  // imageUrl: string;
+  // name: string;
+  // title: string;
+  // alt: string;
+  // blurDataUrl: string;
 };
 
 export default function PortfolioCard({
-  siteDetails: { link, image, name, title, alt },
+  siteDetails: { link, imageUrl, name, title, alt, blurDataUrl },
 }: {
   siteDetails: SiteDetailType;
 }) {
@@ -20,7 +22,15 @@ export default function PortfolioCard({
       title="Granite Website development in Bengaluru"
     >
       <div id="image-container" className="relative w-[400px] h-[300px]">
-        <Image src={image} alt={alt} fill className="object-cover " />
+        <Image
+          src={imageUrl}
+          alt={alt}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          className="object-cover "
+          placeholder="blur"
+          blurDataURL={blurDataUrl}
+        />
       </div>
 
       <div className="  opacity-0 absolute top-0 hover:opacity-100 hover:bg-blue-900/80 w-full h-full flex flex-col justify-center items-center z-50 gap-4 ease-in-out duration-700">

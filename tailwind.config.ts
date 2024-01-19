@@ -13,6 +13,9 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      listStyleImage: {
+        store: 'url("/public/check-icon2.png")',
+      },
     },
   },
   plugins: [require("@tailwindcss/container-queries")],

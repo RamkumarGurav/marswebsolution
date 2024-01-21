@@ -5,6 +5,8 @@ import Navbar from "@/components/Navbar/Navbar";
 import Image from "next/image";
 import WhatsappLogo from "@/public/whatsapplogo_1.png";
 import Link from "next/link";
+import SideEnquire from "@/components/Layout/SideEnquire";
+import MobileEnquire from "@/components/Layout/MobileEnquire";
 
 export const metadata = {
   title: "Web Design & Digital Marketing Services | Mars Web solution",
@@ -27,13 +29,14 @@ export default function WebsiteLayout({
         <FooterBottom />
       </footer>
 
-      <div className="bg-[#0293C2] hidden lg:flex justify-center items-center fixed right-0 top-[30vh]  w-[45px] h-[130px]  z-[999]">
-        <button className="rotate-90 text-lg text-white font-semibold whitespace-nowrap absolute top-[50px] right-[-27px] ">
+      {/* <div className="bg-[#0293C2] hidden sm:flex justify-center items-center fixed right-0 top-[30vh]  w-[45px] h-[130px]  z-[999]">
+        <button className="rotate-90 text-sm text-white font-semibold whitespace-nowrap absolute top-[50px] right-[-27px] ">
           Equire Here
         </button>
-      </div>
+      </div> */}
 
-      <div className="bg-[#34AB49] text-white px-6 py-2 hidden fixed left-0 bottom-0 lg:flex items-center justify-center z-[999]">
+      <SideEnquire />
+      <div className="bg-[#34AB49] text-white px-6 py-2 hidden fixed left-0 bottom-0 sm:flex items-center justify-center z-[999]">
         <Link
           href="https://api.whatsapp.com/send?phone=+918088230479&amp;text=MARS%20Web%20Solutions%20"
           target="_blank"
@@ -51,31 +54,106 @@ export default function WebsiteLayout({
         </Link>
       </div>
 
-      {/* //---For below LG devices */}
+      {/* //---For below SM devices */}
 
-      <div className="visible grid grid-cols-2 fixed bottom-0 left-0 right-0 w-full lg:hidden z-[999]">
-        <div className="flex justify-center items-center gap-1 bg-[#34AB49] text-white p-4">
-          <Link
-            href="https://api.whatsapp.com/send?phone=+918088230479&amp;text=MARS%20Web%20Solutions%20"
-            target="_blank"
-            title="Contact Us via WhatsApp"
-            className="flex justify-center items-center gap-1"
-          >
+      <div className="visible grid grid-cols-2 fixed bottom-0 left-0 right-0 w-full sm:hidden z-[999]">
+        <Link
+          href="https://api.whatsapp.com/send?phone=+918088230479&amp;text=MARS%20Web%20Solutions%20"
+          target="_blank"
+          title="Contact Us via WhatsApp"
+          className="flex justify-center items-center gap-1 bg-[#34AB49] text-white p-4"
+        >
+          <div className="flex justify-center items-center gap-1">
             <Image
               src={WhatsappLogo}
               alt="whatsapp logo"
               width={200}
               height={200}
-              className="w-auto h-[20px]  object-cover"
+              className="w-auto h-[20px]  object-cover "
             />
-            <span className="grid place-content-center">Whatsapp</span>
-          </Link>
-        </div>
-        <div className="bg-[#0293C2] grid place-items-center">
-          <span className="text-md font-semibold cursor-pointer text-white">
-            Enquire Here
-          </span>
-        </div>
+            <span className="grid place-content-center hover:underline">
+              Whatsapp
+            </span>
+          </div>
+        </Link>
+        <MobileEnquire />
+        {/* <div>
+          <div className="bg-[#0293C2] grid place-items-center">
+            <span
+              className="text-md font-semibold cursor-pointer text-white"
+              onClick={() => setOpen(!open)}
+            >
+              Enquire Here
+            </span>
+          </div>
+
+          <div
+            className={`z-[999] fixed top-0  sm:hidden  ${
+              open ? "left-[0]" : "left-[100%]"
+            }`}
+          >
+            <button className="bg-blue-500 text-white p-2 absolute right-2 top-2">
+              x
+            </button>
+            <form className="bg-white w-screen h-screen border border-gray-200 border-t-0 shadow flex flex-col p-4">
+              <div className="gap-2 flex flex-col">
+                <h1 className="text-lg text-gray-900 font-semibold">
+                  Enquire Here
+                </h1>
+                <input
+                  type="text"
+                  placeholder="Name* "
+                  className="bg-gray-50 border border-gray-400 text-gray-900 text-sm  focus:ring-gray-900 focus:outline-none focus:border-gray-900 block w-full p-2.5 py-2    "
+                />
+                <input
+                  type="text"
+                  placeholder="Email ID* "
+                  className="bg-gray-50 border border-gray-400 text-gray-900 text-sm  focus:ring-gray-900 focus:outline-none focus:border-gray-900 block w-full p-2.5 py-2 "
+                />
+                <input
+                  type="tel"
+                  placeholder="Mobile Number* "
+                  className="bg-gray-50 border border-gray-400 text-gray-900 text-sm  focus:ring-gray-900 focus:outline-none focus:border-gray-900 block w-full p-2.5 py-2 "
+                />
+                <textarea
+                  placeholder="Message*"
+                  cols={10}
+                  rows={4}
+                  className="bg-gray-50 border border-gray-400 text-gray-900 text-sm  focus:ring-gray-900 focus:outline-none focus:border-gray-900 block w-full p-2.5 py-2 "
+                />
+                <div>
+                  <button
+                    className="px-4 py-2 text-sm text-white bg-blue-700 inline-block rounded hover:bg-blue-700/80"
+                    type="submit"
+                  >
+                    send message
+                  </button>
+                </div>
+                <p className="text-xs text-gray-700 leading-tight">
+                  This site is protected by reCAPTCHA and the Google{" "}
+                  <Link
+                    target="_blank"
+                    title="Google Privacy Policy"
+                    href="https://policies.google.com/privacy"
+                    className="text-blue-500/80 hover:text-fuchsia-500/90 hover:underline"
+                  >
+                    Privacy Policy
+                  </Link>{" "}
+                  and{" "}
+                  <Link
+                    target="_blank"
+                    title="Google Terms of Service"
+                    href="https://policies.google.com/terms"
+                    className="text-blue-500/80 hover:text-fuchsia-500/90 hover:underline"
+                  >
+                    Terms of Service
+                  </Link>{" "}
+                  apply.
+                </p>
+              </div>
+            </form>
+          </div>
+        </div> */}
       </div>
       {/* //----------------- */}
     </div>

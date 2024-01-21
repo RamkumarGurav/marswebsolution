@@ -34,7 +34,7 @@ export default function HomeCarousel() {
   return (
     <div
       id="homeCarousel"
-      className="relative flex items-center justify-center w-full "
+      className="relative flex items-center justify-center w-full z-[100] "
     >
       <LinkGrid />
       <div className=" carousel-shell relative w-full  overflow-hidden  ">

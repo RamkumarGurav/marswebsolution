@@ -5,7 +5,7 @@ import { FaSearchPlus } from "react-icons/fa";
 import Link from "next/link";
 export default function LinkGrid() {
   return (
-    <div className="linkGridShell absolute bottom-[10%] w-full z-40 px-10">
+    <div className="linkGridShell absolute bottom-[10%] w-full z-[900] px-10">
       <div className="mx-auto max-w-[700px] grid grid-cols-2 sm:grid-cols-4  gap-4 place-content-center place-items-center">
         <Link
           href="/"

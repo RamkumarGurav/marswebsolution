@@ -17,7 +17,7 @@ export default function SideNav({
     <div
       className={`visible  fixed bg-[#3390c2c4] w-[220px] right-0 h-screen  ${
         open ? " top-0" : "top-[-100vh] "
-      } flex flex-col items-end gap-4  pt-4  transition-all duration-700 ease-in-out lg:hidden`}
+      } flex flex-col items-end gap-4  pt-4  transition-all duration-700 ease-in-out lg:hidden z-[1000]`}
     >
       <CgClose
         size={30}

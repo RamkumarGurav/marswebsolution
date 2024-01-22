@@ -6,7 +6,7 @@ import { IoCloseOutline } from "react-icons/io5";
 
 export default function MobileEnquire() {
   const [open, setOpen] = useState(false);
-  console.log(open);
+  // console.log(open);
   return (
     <div className="h-full ">
       <div

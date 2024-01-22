@@ -55,9 +55,9 @@ export default function Navbar() {
     };
   }, [isScrolled]); // Empty
 
-  if (isScrolled) {
-    console.log("scrolled");
-  }
+  // if (isScrolled) {
+  //   console.log("scrolled");
+  // }
   return (
     <div
       className={` min-w-[100%] ${
